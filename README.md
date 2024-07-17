@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Classy Weather
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Classy Weather is a React-based weather forecasting application that fetches weather data for a specified location. The app uses the Open-Meteo API to provide accurate weather forecasts.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Search for weather information by location.
+- Displays weather icons based on WMO codes.
+- Shows maximum and minimum temperatures for the next few days.
+- Uses local storage to remember the last searched location.
+- Loading indicator while fetching data.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+You need to have Node.js and npm installed on your machine. If you don't have them installed, you can download and install them from [here](https://nodejs.org/).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+1. Clone the repository to your local machine:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/your-username/classy-weather.git
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Navigate to the project directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   cd classy-weather
+   ```
 
-### `npm run eject`
+3. Install the dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm install
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Start the development server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   npm start
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   The app should now be running on `http://localhost:3000`.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Enter a location in the search input field.
+2. Click on the "Get weather" button to fetch the weather data for the entered location.
+3. The weather forecast, including weather icons and temperature ranges, will be displayed for the next few days.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Code Structure
 
-### Code Splitting
+- `src/App.js`: Main component that handles the state and logic for fetching and displaying weather data.
+- `src/Input.js`: Input component for entering the location.
+- `src/Weather.js`: Component for displaying the weather information.
+- `src/Day.js`: Component for displaying individual day's weather details.
+- `src/utils.js`: Utility functions for converting country codes to flags and formatting dates.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## API Reference
 
-### Analyzing the Bundle Size
+The application uses the [Open-Meteo API](https://open-meteo.com/) for fetching weather data and the [Geocoding API](https://open-meteo.com/en/docs#api-formats) for converting location names to coordinates.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+Contributions are welcome! Please open an issue or submit a pull request for any bugs or feature requests.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Acknowledgments
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Open-Meteo](https://open-meteo.com/) for providing the weather and geocoding APIs.
+- Emoji icons used for weather representation.
